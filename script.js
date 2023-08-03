@@ -1,9 +1,4 @@
 let gridContainer = document.getElementById("gridContainer");
-let sizeButton = document.getElementById("buttonSize");
-let refreshButton = document.getElementById("buttonRefresh");
-let rainbowButton = document.getElementById("buttonRainbow");
-let coloringButton = document.getElementById("buttonColoring");
-let eraserButton = document.getElementById("buttonEraser");
 
 let gridSize = 25;
 let rainbowMode = false;
@@ -77,6 +72,7 @@ function destroyGrid() {
     gridContainer.innerHTML = '';
 }
 
+// Selects and returns a random color.
 function randomColor() {
 
     let r = randomColorNumber();
@@ -86,12 +82,20 @@ function randomColor() {
     return "rgb("+[r,g,b]+")";
 }
 
+// Retunrs random number between 0 - 256 for the randomColor func.
 function randomColorNumber() {
 
     return Math.floor(Math.random() * 255) + 1  // between 0 - 256
 }
 
+// Button set up.
 function setUpButtons() {
+
+    let sizeButton = document.getElementById("buttonSize");
+    let refreshButton = document.getElementById("buttonRefresh");
+    let rainbowButton = document.getElementById("buttonRainbow");
+    let coloringButton = document.getElementById("buttonColoring");
+    let eraserButton = document.getElementById("buttonEraser");
 
     sizeButton.addEventListener('click', getSize);
     refreshButton.addEventListener('click', createGrid);
@@ -109,10 +113,13 @@ function setUpButtons() {
     });
 }
 
+// Default color set up. 
+// This is it's own function because I'd like to beable to change colors eventually.
 function setColor() {
     color = "rgb(64,64,64)";
 }
 
+// Prevents HTML from being dragged. This is an issue when clicking to draw.
 function preventDrag() {
 
     document.body.addEventListener('dragstart', (e) => {
