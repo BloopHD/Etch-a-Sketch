@@ -1,15 +1,68 @@
-#buttonContainer {
+header {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 16px;
+    margin: 16px;;
+}
+
+#body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 36px;
+}
+
+#optionsContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    border-radius: 15px;
+}
+
+#buttonContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    border: 4px dashed rgb(61, 61, 61);
+    border-radius: 15px;
     padding: 16px;
 }
+
+#settingButtons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+#settingButtons button {
+    width: 75px;
+}
+
+#coloringButtons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+
+#coloringButtons button {
+    width: 160px;
+}
+
 
 #gridContainer {
     display: flex;
     flex-direction: column;
     border: 1px solid rgb(61, 61, 61);
+    width: 800px;
 }
 
 .row {
@@ -18,7 +71,7 @@
 }
 
 .col {
-    border: 1px solid rgb(255, 255, 255);
+    border: 1px solid rgb(245, 245, 245);
     width: 100%;
     aspect-ratio: 1/1;
 }

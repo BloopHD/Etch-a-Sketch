@@ -3,20 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>JS Etch-A-Sketch</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
 <body>
-    <div id="buttonContainer">
-        <button id="buttonSize">
-            Size
-        </button>
-        <button id="buttonRefresh">
-            Refresh
-        </button>
+ 
+    <div id="body">
+        <div id="optionsContainer">
+            <h3>Options</h3>
+            <div id="buttonContainer">
+                <div id="settingButtons">
+                    <button id="buttonSize">
+                        Resize
+                    </button>
+                    <button id="buttonRefresh">
+                        Refresh
+                    </button>
+                </div>
+                <div id="coloringButtons">
+                    <button id="buttonColoring">
+                        Defualt Color
+                    </button>
+                    <button id="buttonEraser">
+                        Eraser
+                    </button>
+                    <button id="buttonRainbow">
+                        Rainbow Mode!
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+    
+        <div>
+            <header>
+                <h1>
+                    Simple JavaScript Etch-A-Sketch!
+                </h1>
+            </header>
+            <div id="gridContainer"></div>
+        </div>
+        
     </div>
 
-    <div id="gridContainer"></div>
 </body>
 </html>
